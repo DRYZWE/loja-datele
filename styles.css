@@ -109,6 +109,38 @@ body {
   width: 200px;
   margin-bottom: 1rem;
 }
+.modal-content .pix-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  word-break: break-word;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.modal-content .pix-info img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.modal-content .pix-info p {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.modal-content .pix-info button {
+  width: auto;
+  padding: 0.4rem 1rem;
+  margin-top: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
 
 .close {
   position: absolute;
@@ -350,5 +382,6 @@ footer p {
     font-size: 1.8rem;
   }
 }
+
 
 
