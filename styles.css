@@ -1,0 +1,253 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+}
+
+.topbar {
+  background-color: #001f3f;
+  color: white;
+  padding: 1rem 1rem 1rem 5rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.logo-container {
+  position: absolute;
+  left: 5rem; /* aumente aqui */
+  top: -30px;
+  background: white;
+  padding: 0.5rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+}
+
+
+.logo {
+  height: 180px;
+}
+
+.welcome {
+  text-align: center;
+  margin: 1rem;
+  padding: 1rem;
+  background-color: #eaf4ff;
+  border-radius: 8px;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.modal {
+  cursor: pointer;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  cursor: default;
+  background: white;
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  width: 90%;
+  max-width: 320px;
+  position: relative;
+  animation: popIn 0.3s ease-out;
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.modal-content img {
+  width: 200px;
+  margin-bottom: 1rem;
+}
+
+.close {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.copy-btn {
+  background-color: #001f3f;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  margin-left: 0.5rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.copy-btn:hover {
+  background-color: #003366;
+}
+
+footer {
+  margin-top: 3rem;
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #001f3f;
+  color: white;
+  flex-direction: column;
+}
+
+footer p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  color: #001f3f;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+.social-links a:hover {
+  transform: scale(1.05);
+  background-color: #eaf4ff;
+}
+
+.insta-icon {
+  width: 22px;
+  height: 22px;
+  margin-right: 0.5rem;
+}
+
+.insta-handle {
+  font-size: 1rem;
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.5s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.categoria-titulo {
+  text-align: left;
+  margin: 2rem 1rem 0.5rem;
+  font-size: 1.5rem;
+  color: #001f3f;
+  border-left: 4px solid #ffaa00;
+  padding-left: 1rem;
+}
+#menu-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 2rem;
+  z-index: 1000;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #001f3f;
+  color: white;
+  width: 220px;
+  height: 100%;
+  padding-top: 60px;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(-100%);
+  z-index: 999;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 1rem;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.sidebar li:hover {
+  background: #003366;
+}
+
+.sidebar.show {
+  transform: translateX(0);
+}
+
+#instrucoes-cafe .modal-content {
+  max-width: 500px;
+  text-align: left;
+}
+

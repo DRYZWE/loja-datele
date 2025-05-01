@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loja DaTele</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icons/icon.png" type="image/png" />
+  <script defer src="script.js"></script>
+</head>
+<body> <!-- <-- Aqui começa o <body> que faltava -->
+
+  <!-- Botão do menu lateral -->
+  <div id="menu-toggle">&#9776;</div>
+
+  <!-- Menu lateral -->
+  <nav id="sidebar" class="sidebar hidden">
+    <ul>
+      <li onclick="fecharMenu()">Produtos</li>
+      <li onclick="abrirCafe()">Café</li>
+    </ul>
+  </nav>
+
+  <!-- Modal com instruções do café -->
+  <div id="instrucoes-cafe" class="modal hidden">
+    <div class="modal-content">
+      <h2>Como usar a cafeteira Dolce Gusto ☕</h2>
+      <ol>
+        <li><strong>Ligue a cafeteira</strong> no botão lateral e aguarde a luz parar de piscar.</li>
+        <li><strong>Coloque água</strong> no reservatório traseiro (use água filtrada).</li>
+        <li><strong>Levante a alavanca da frente</strong> para abrir o compartimento da cápsula.</li>
+        <li><strong>Insira a cápsula</strong> (ou a primeira cápsula, se forem duas) no suporte e empurre de volta.</li>
+        <li><strong>Empurre a alavanca para baixo</strong> para travar a cápsula.</li>
+        <li><strong>Escolha a quantidade de água</strong> com a alavanca do topo: <br>
+          &nbsp;&nbsp;- Para bebidas quentes (ex: Espresso, Nescau, Capuccino), empurre para a direta seta vermelha (água quente)<br>
+          &nbsp;&nbsp;- Para bebidas geladas (ex: Nescau , chás gelados), empurre para a esquerda seta azul (água fria)</li>
+        <li><strong>Aguarde até terminar</strong> o preparo e a bebida parar de sair.</li>
+        <li><strong>Levante a alavanca</strong> e remova a cápsula usada (jogue fora).</li>
+        <li><strong>Se for uma bebida com 2 cápsulas</strong> (Capuccino, Chococcino):<br>
+          &nbsp;&nbsp;- Repita o processo com a segunda cápsula, geralmente a marrom é o café/chocolate.</li>
+      </ol>
+      
+      <h3>💡 Dicas importantes:</h3>
+      <ul>
+        <li>Use sempre as duas cápsulas no caso de bebidas que pedem isso (a branca e a marrom).</li>
+        <li>Limpe o suporte da cápsula com um papel seco após o uso.</li>
+        <li>Evite deixar a cápsula dentro após o preparo.</li>
+        <li>Desligue a cafeteira após o uso para economizar energia.</li>
+      </ul>
+    </div>
+  </div>
+
+  <header class="topbar">
+    <div class="logo-container">
+      <img src="icons/datele_bgwhite.png" alt="Logo DaTele" class="logo" />
+    </div>
+    <h1>Loja DaTele</h1>
+  </header>
+
+  <main>
+    <section class="welcome">
+      <h2>Seja bem-vindo à nossa lojinha!</h2>
+      <p>Escolha seus doces e finalize com Pix 😊</p>
+    </section>
+
+    <section>
+      <h2 class="categoria-titulo">🍬 Doces</h2>
+      <div class="grid" id="grid-doces"></div>
+    </section>
+
+    <section>
+      <h2 class="categoria-titulo">☕ Cafés & Bebidas</h2>
+      <div class="grid" id="grid-bebidas"></div>
+    </section>
+  </main>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img src="icons/pix-qrcode.png" alt="QR Code Pix" />
+      <p class="pix">
+        Pix: (21) 98846-3718
+        <button class="copy-btn" onclick="copiarPix()">Copiar</button>
+      </p>
+      <p class="nome">Enrico Raíra Gomes Morais</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>Nossas redes sociais:</p>
+    <div class="social-links">
+      <a href="https://www.instagram.com/dateleuff/" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" class="insta-icon" alt="Instagram Dátele" />
+        @dateleuff
+      </a>
+      <a href="https://www.instagram.com/marvintelecom/" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" class="insta-icon" alt="Instagram Marvin" />
+        @marvintelecom
+      </a>
+    </div>
+  </footer>
+
+</body>
+</html>
+
